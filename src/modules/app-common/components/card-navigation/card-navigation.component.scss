@@ -1,0 +1,9 @@
+@import 'styles/core/variables.scss';
+
+:host {
+    display: block;
+}
+
+a.nav-link {
+    cursor: pointer;
+}

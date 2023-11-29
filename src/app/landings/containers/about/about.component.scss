@@ -1,0 +1,10 @@
+@import 'styles/core/variables.scss';
+
+.mission {
+  font-size: 40px;
+  font-weight: 200;
+
+  span {
+    color: $atomic-tangerine;
+  }
+}

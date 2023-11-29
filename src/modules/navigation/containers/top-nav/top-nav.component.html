@@ -1,0 +1,55 @@
+<nav class="navbar navbar-marketing navbar-expand-lg" sbproScrollSpy [ngClass]="topNavClasses">
+    <div class="container px-5">
+        <!-- <a class="navbar-brand" routerLink="/" [ngClass]="brandClasses">Repsoft Analytics</a><button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i-feather name="menu"></i-feather></button> -->
+        <div class="row w-100">
+            <div class="col-xl-12 col-10">
+                <div class="d-flex align-items-center">
+                    <img class="logo img-fluid" src="/assets/img/repsoftlogo.png" width="70" height="70"/>
+                    <a class="px-2 navbar-brand text-blue-brand text-start text-wrap" routerLink="/" >Repsoft Analytics</a>
+                </div>
+
+            </div>
+            <div class="col-2">
+              <div class="d-flex justify-content-end align-items-start">
+                <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i-feather name="menu"></i-feather></button>
+              </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isMenuCollapsed">
+            <ul class="navbar-nav ms-auto me-lg-5">
+                <li class="nav-item"><a class="nav-link" routerLink="/">Home</a></li>
+                <li class="nav-item dropdown dropdown-xl no-caret" ngbDropdown>
+                    <a class="nav-link dropdown-toggle pointer" id="navbarDropdownDemos" ngbDropdownToggle data-cy="landingsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       routerLink="/whoweare">Who We Are<fa-icon class="dropdown-arrow" [icon]='["fas", "chevron-right"]'></fa-icon></a>
+
+                </li>
+                <li class="nav-item dropdown dropdown-xl no-caret" ngbDropdown>
+                    <a class="nav-link dropdown-toggle pointer"
+                        id="navbarDropdownPages"
+                        ngbDropdownToggle
+                        data-cy="pagesDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        [routerLink]="['']" [fragment]="'home-whatwedo'">What We Do<fa-icon class="dropdown-arrow" [icon]='["fas", "chevron-right"]'></fa-icon></a>
+
+                </li>
+                <li class="nav-item dropdown no-caret" ngbDropdown>
+                    <a class="nav-link dropdown-toggle pointer"
+                        id="navbarDropdownDocs"
+                        ngbDropdownToggle data-cy="documentationDropdown"
+                        role="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                        [routerLink]="['']" [fragment]="'home-mission'">Our Mission<fa-icon class="dropdown-arrow" [icon]='["fas", "chevron-right"]'></fa-icon></a>
+
+                </li>
+            </ul>
+            <!-- <a class="btn btn-primary fw-500 ms-lg-4" href="https://shop.startbootstrap.com/product/sb-ui-kit-pro-angular/" [ngClass]="buttonClasses">Contact Us<i-feather class="ms-2" name="arrow-right"></i-feather></a> -->
+            <a class="btn btn-primary contact-us fw-500 ms-lg-4" routerLink="/contact" [ngClass]="buttonClasses">Contact Us<i-feather class="ms-2" name="arrow-right"></i-feather></a>
+        </div>
+    </div>
+</nav>
